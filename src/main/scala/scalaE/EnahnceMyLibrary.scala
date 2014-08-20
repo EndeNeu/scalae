@@ -10,8 +10,10 @@ class EnahnceMyLibrary {
         case _ => t :: self
       }
   }
+
   implicit def enhanceList[T](self: List[T]) = new EnhancedList(self)
 
-  List(1,2,3).?:(1)
+  List(1, 2, 3).?:(1)
+
 
 }
