@@ -8,6 +8,6 @@ class TraitForObject {
   object Foo extends OnlyForObjects
 
   // doesn't compile
-  class Bar extends OnlyForObjects
+  // class Bar extends OnlyForObjects
 
 }

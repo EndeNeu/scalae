@@ -16,10 +16,4 @@ class PF {
 
   c("foo")
 
-  case class NameFinder(getReliableName: String, secondBestChoice: String)
-
-  def chooseName(nameFinder: NameFinder) = {
-    Option(nameFinder.getReliableName).filter(_.nonEmpty).getOrElse(nameFinder.secondBestChoice)
-  }
-
 }
