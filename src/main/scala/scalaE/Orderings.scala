@@ -1,7 +1,6 @@
 package scalaE
 
-class Ordering {
-
+class Orderings {
 
 
 }

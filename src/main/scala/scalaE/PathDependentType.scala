@@ -41,6 +41,11 @@ class PathDependentType {
 
   In fact, path dependent types in Scala can be expanded to type selections. The path dependent type p.t is taken as a shorthand for p.type # t.
   Here, p.type is a singleton type, which represents just the object denoted by p.
+   */
 
+  /*
+  The type selection p.T, where T is a type member defined in the type of p,
+  is syntactic sugar for p.type#T . We say that a type that contains the type p.type
+  depends on the path p. The type p.T is a path-dependent type.
    */
 }
