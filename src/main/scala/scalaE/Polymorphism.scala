@@ -21,6 +21,37 @@ class Polymorphism {
   for arguments of any admissible type, whereas an ad-hoc polymorphic function may execute
   different code for each type of argument.
 
+                           / parametric
+                          /
+              / universal
+             /            \
+            /              \ Inclusion
+  plymorphism
+            \           / overloading
+             \         /
+              \ ad hoc
+                       \
+                        \ coercion
+
+
+   - parametric: In parametric polymorphism, a polymorphic function has an implicit or
+                 explicit type parameter, which determines the type of the argument for
+                 each application of that function.
+
+   - inclusions: In inclusion polymorphism an object can be viewed as belonging to
+                  many different classes which need not be disjoint, i.e. there may be inclusion of classes.
+
+   - overloading: the same variable name is used to denote different functions
+                  and the context is used to decide which function is denoted by a particular
+                  instance of the name.
+
+   - coercion: A coercion is instead a semantic operation which is needed to convert an argument
+               to the type expected by a function, in a situation which would otherwise result in a type error.
+               Coercions can be provided statically, by automatically inserting them between arguments and functions
+               at compile time, or may have to be determined dynamically by run-time tests on the arguments.
+
+
+
    */
 
   case class Node(elem:String, child:List[Node])
