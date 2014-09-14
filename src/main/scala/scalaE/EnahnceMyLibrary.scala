@@ -15,5 +15,7 @@ class EnahnceMyLibrary {
 
   List(1, 2, 3).?:(1)
 
-
 }
+
+
+case class someClass(f1: Int, f2: String, f3: Long)

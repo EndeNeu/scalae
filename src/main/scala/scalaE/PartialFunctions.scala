@@ -1,6 +1,6 @@
 package scalaE
 
-class PF {
+class PartialFunctions {
   val a: PartialFunction[String, Unit] = {
     case "hello" => println("bye")
   }

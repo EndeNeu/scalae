@@ -1,5 +1,11 @@
-package scalaE
+package scalaE.monads
 
+/*
+Monoids a re a simpler form of Monad whcih does't have a bind method,
+Ints are monoids because have associativity:
+ x + y + z = (x + y) + z = x + (y + z)
+
+ */
 class Monoids {
 
   /*

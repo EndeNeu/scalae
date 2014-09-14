@@ -1,4 +1,4 @@
-package scalaE
+package scalaE.types
 
 class ViewBound {
 
