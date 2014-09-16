@@ -1,8 +1,10 @@
 package scalaE.concurrency
 
-import concurrent.{Future, Promise}
+import concurrent.{ExecutionContext, Future, Promise}
+import ExecutionContext.Implicits.global
 
-class Promise {
+
+class Promises {
 
 
   def race[T](f1: Future[T], f2: Future[T]): Future[T] = {

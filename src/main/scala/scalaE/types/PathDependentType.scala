@@ -25,9 +25,7 @@ class PathDependentType {
 
   class outer {
     def getInner = new inner()
-
     class inner {}
-
   }
 
   // # syntax is called type selection

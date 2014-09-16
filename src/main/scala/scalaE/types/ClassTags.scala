@@ -1,6 +1,8 @@
 package scalaE.types
 
-class ClassTag {
+import reflect.ClassTag
+
+class ClassTags {
 
   def getAs[T: ClassTag](m: Map[String, Any], key: String): T =
     m(key).asInstanceOf[T]

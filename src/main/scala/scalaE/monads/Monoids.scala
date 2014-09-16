@@ -31,25 +31,26 @@ class Monoids {
 
   object Monoids {
 
-    object stringMonoid extends Monoid[String] {
+    implicit object stringMonoid extends Monoid[String] {
       def add(x: String, y: String): String = x.concat(y)
 
       def unit: String = ""
     }
 
-    object intMonoid extends Monoid[Int] {
+    implicit object intMonoid extends Monoid[Int] {
       def add(x: Int, y: Int): Int = x + y
 
       def unit: Int = 0
     }
 
+
+    def sum[a](xs: List[a])(implicit m: Monoid[a]): a =
+      if (xs.isEmpty) m.unit
+      else m.add(xs.head, sum(xs.tail)(m))
+
+    sum(List("a", "bc", "def"))
+    sum(List(1, 2, 3))
+
   }
-
-  def sum[a](xs: List[a])(implicit m: Monoid[a]): a =
-    if (xs.isEmpty) m.unit
-    else m.add(xs.head, sum(xs.tail)(m))
-
-  sum(List("a", "bc", "def"))
-  sum(List(1, 2, 3))
 
 }

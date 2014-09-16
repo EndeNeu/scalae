@@ -1,7 +1,8 @@
 package scalaE.concurrency
 
-import concurrent.Future
+import concurrent.{ExecutionContext, Future}
 import scala.async.Async.{async, await}
+import ExecutionContext.Implicits.global
 
 class Async {
 
