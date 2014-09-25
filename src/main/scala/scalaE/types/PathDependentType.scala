@@ -25,7 +25,9 @@ class PathDependentType {
 
   class outer {
     def getInner = new inner()
+
     class inner {}
+
   }
 
   // # syntax is called type selection
@@ -46,4 +48,23 @@ class PathDependentType {
   is syntactic sugar for p.type#T . We say that a type that contains the type p.type
   depends on the path p. The type p.T is a path-dependent type.
    */
+
+  class A {
+
+    class B
+
+    def f(b: B) = println("Got my B!")
+
+    def g(b: A#B) = println("Got a B.")
+  }
+
+  val a1 = new A
+  val a2 = new A
+
+  // doesn't compile, path dependent type => a1.b != a2.b
+  // a2.f(new a1.B)
+
+  // compiles, the # notation makes it so that the function is valid for every
+  // B instance.
+  a2.g(new a1.B)
 }
