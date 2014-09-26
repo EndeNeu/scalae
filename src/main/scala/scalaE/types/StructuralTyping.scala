@@ -28,6 +28,11 @@ you need to give it a type constructor of one argument. The solution to this is 
 This is an example of currying in the type system - you have curried the type of Either,
 such that when you want to create an instance of EitherMonad, you have to specify one of the types;
 the other of course is supplied at the time you call point or bind.
+
+({type λ[α] = Either[A, α]}) declare a type λ[α] where α is to be inferred...
+#λ and extract that type, so basically this allows to return a curried type where
+A is a concrete generic type and α has to be yet inferred.
+
  */
 abstract class EitherMonad[A] extends Monad[({type λ[α] = Either[A, α]})#λ] {
   def point[B](b: B): Either[A, B]
