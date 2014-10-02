@@ -34,7 +34,7 @@ the other of course is supplied at the time you call point or bind.
 A is a concrete generic type and α has to be yet inferred.
 
  */
-abstract class EitherMonad[A] extends Monad[({type λ[α] = Either[A, α]})#λ] {
+  abstract class EitherMonad[A] extends Monad[({type λ[α] = Either[A, α]})#λ] {
   def point[B](b: B): Either[A, B]
   def bind[B, C](m: Either[A, B])(f: B => Either[A, C]): Either[A, C]
 }
