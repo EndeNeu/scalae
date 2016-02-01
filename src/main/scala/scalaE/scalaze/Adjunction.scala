@@ -1,4 +1,4 @@
-package scalaE.scalaz
+package scalaE.scalaze
 
 class Adjunction {
 
