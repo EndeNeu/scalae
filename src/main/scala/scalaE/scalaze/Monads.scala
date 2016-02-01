@@ -1,4 +1,4 @@
-package scalaE.monads
+package scalaE.scalaze
 
 /*
 
@@ -17,17 +17,13 @@ because  the left hand side will never raise a non fatal exceptions bt the right
  */
 
 
-trait M[T] {
+trait Monads[T] {
 
-  def flatMap[S](f: T => M[S]): M[S]
+  def flatMap[S](f: T => Monads[S]): Monads[S]
 
-  def unit[S](x: S): M[S]
+  def unit[S](x: S): Monads[S]
 
   // map is defined with combination of flatMap and unit
-  def map[S](m: M[T], f: T => S): M[S] = m.flatMap(x => unit(f(x)))
-
-}
-
-class Monads {
+  def map[S](m: Monads[T], f: T => S): Monads[S] = m.flatMap(x => unit(f(x)))
 
 }

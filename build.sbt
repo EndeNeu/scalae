@@ -2,6 +2,12 @@ name := "scalaE"
 
 version := "1.0"
 
+resolvers ++= Seq(
+  Resolver.sonatypeRepo("releases"),
+  Resolver.sonatypeRepo("snapshots")
+)
+
+
 
 libraryDependencies ++= Seq(
   "com.netflix.rxjava" % "rxjava-scala" % "0.15.0",
@@ -13,5 +19,6 @@ libraryDependencies ++= Seq(
   "org.slf4j" % "slf4j-simple" % "1.7.5",
   "com.squareup.retrofit" % "retrofit" % "1.0.0",
   "org.scala-lang.modules" %% "scala-async" % "0.9.0-M2",
-  "org.scalaz" %% "scalaz-core" % "7.2.0"
+  "org.scalaz" %% "scalaz-core" % "7.2.0",
+  "com.chuusai" %% "shapeless" % "2.2.5"
 )

@@ -4,7 +4,7 @@
 		module="scalae_2.10"
 		revision="1.0"
 		status="integration"
-		publication="20160201121528"
+		publication="20160201164959"
 	>
 		<description>
 		scalaE
@@ -44,5 +44,6 @@
 		<dependency org="com.squareup.retrofit" name="retrofit" rev="1.0.0" conf="compile->default(compile)"/>
 		<dependency org="org.scala-lang.modules" name="scala-async_2.10" rev="0.9.0-M2" conf="compile->default(compile)"/>
 		<dependency org="org.scalaz" name="scalaz-core_2.10" rev="7.2.0" conf="compile->default(compile)"/>
+		<dependency org="com.chuusai" name="shapeless_2.10" rev="2.2.5" conf="compile->default(compile)"/>
 	</dependencies>
 </ivy-module>
