@@ -36,10 +36,8 @@ object Creator {
       case _ => None
     }
 
-  implicit def caseClassCreate[C, R <: HList](implicit
-                                              gen: Generic.Aux[C, R],
-                                              rc: Creator[R]
-                                             ): Creator[C] = instance(s => rc(s).map(gen.from))
+  implicit def caseClassCreate[C, R <: HList](implicit gen: Generic.Aux[C, R], rc: Creator[R] ): Creator[C] =
+    instance(s => rc(s).map(gen.from))
 
 }
 
@@ -51,8 +49,6 @@ case class Book(title: String, author: String, year: Int)
 case class Country(name: String, population: Int, area: Double)
 
 object CreteClassesFromParams {
-
-  import Creator._
 
   val amy = Creator.create[Person]("Amy,54.2")
   // amy: Option[Person] = Some(Person(Amy,54.2))
