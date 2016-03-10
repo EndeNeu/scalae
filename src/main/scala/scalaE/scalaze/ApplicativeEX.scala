@@ -9,10 +9,12 @@ import scalaz.Applicative
 object ApplicativeEx {
 
   import scalaz.Apply
-  import scalaz.std.anyVal._
-  import scalaz.std.list._
   import scalaz.std.option._
+  import scalaz.std.list._
   import scalaz.std.string._
+  import scalaz.std.anyVal._
+  import scalaz.std.vector._
+  import scalaz.std.tuple._
   import scalaz.syntax.equal._
   import scalaz.syntax.std.option._
 
@@ -37,8 +39,7 @@ object ApplicativeEx {
   assert(Apply[List].ap(List(1,2,3))(List(double, addTwo)) === List(2,4,6,3,4,5))
 
   // custom applicative for custom class example.
-  trait Super {}
-  case class Child[A](val param: List[A]) extends Super {
+  case class Child[A](val param: List[A]) {
 
     final def map[B](f: A => B): Child[B] =
       Child[B](param.map(f))
@@ -57,6 +58,5 @@ object ApplicativeEx {
       f.flatMap(func => fa.map(func))
   }
 
-  lazy val applicate = apB.ap(Child(List(1,2,3)))(Child(List(double, addTwo)))
-
+  lazy val applicated = apB.ap(Child(List(1,2,3)))(Child(List(double, addTwo)))
 }
