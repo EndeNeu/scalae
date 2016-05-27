@@ -5,16 +5,22 @@ object CategoryHierarchy {
   object SimpleCats {
 
     trait Bifoldable[F[_, _]] {
+      // functors with 2 type parameters which allow bi-folding
       def bifoldLeft[A, B, C](fab: F[A, B], c: C)(f: (C, A) => C, g: (C, B) => C): C
     }
 
     trait Bifunctor[F[_, _]] {
+      // functors with 2 type parameters which allow bi-mapping
       def bimap[A, B, C, D](fab: F[A, B])(f: A => C, g: B => D): F[C, D]
     }
 
-    trait Bitraverse[F[_, _]] extends SimpleCats.Bifoldable[F] with SimpleCats.Bifunctor[F]
+    trait Bitraverse[F[_, _]] extends SimpleCats.Bifoldable[F] with SimpleCats.Bifunctor[F] {
+      // Traverse each side of the structure with the given functions
+      def bitraverse[G[_]: Functors.Applicative, A, B, C, D](fab: F[A, B])(f: A => G[C], g: B => G[D]): G[F[C, D]]
+    }
 
     trait Cartesian[F[_]] {
+      // cartesian product.
       def product[A, B](fa: F[A], fb: F[B]): F[(A, B)]
     }
 
@@ -25,6 +31,16 @@ object CategoryHierarchy {
 
     trait Functor[F[_]] {
       def flatMap[A, B](fa: F[A])(f: A => B): F[B]
+    }
+
+    trait Semigroup[F] {
+      // a binary operation.
+      def append(f1: F, f2: => F): F
+    }
+
+    trait Monoid[F] extends SimpleCats.Semigroup[F] {
+      // the identity element.
+      def zero: F
     }
 
   }
