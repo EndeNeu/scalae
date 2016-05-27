@@ -1,0 +1,71 @@
+package scalaE
+
+object CategoryHierarchy {
+
+  object SimpleCats {
+
+    trait Bifoldable[F[_, _]] {
+      def bifoldLeft[A, B, C](fab: F[A, B], c: C)(f: (C, A) => C, g: (C, B) => C): C
+    }
+
+    trait Bifunctor[F[_, _]] {
+      def bimap[A, B, C, D](fab: F[A, B])(f: A => C, g: B => D): F[C, D]
+    }
+
+    trait Bitraverse[F[_, _]] extends SimpleCats.Bifoldable[F] with SimpleCats.Bifunctor[F]
+
+    trait Cartesian[F[_]] {
+      def product[A, B](fa: F[A], fb: F[B]): F[(A, B)]
+    }
+
+    trait Foldable[F[_]] {
+      def foldLeft[A, B](fa: F[A], b: B)(f: (B, A) => B): B
+      def foldRight[A, B](fa: F[A], lb: B)(f: (A, B) => B): B
+    }
+
+    trait Functor[F[_]] {
+      def flatMap[A, B](fa: F[A])(f: A => B): F[B]
+    }
+
+  }
+
+  object Functors {
+
+    trait Apply[F[_]] extends SimpleCats.Functor[F] with SimpleCats.Cartesian[F] {
+      def ap[A, B](ff: F[A => B])(fa: F[A]): F[B]
+    }
+
+    trait Applicative[F[_]] extends Functors.Apply[F] {
+      def pure[A](x: A): F[A]
+    }
+
+    trait CoflatMap[F[_]] extends SimpleCats.Functor[F] {
+      def coflatMap[A, B](fa: F[A])(f: F[A] => B): F[B]
+
+      def coflatten[A](fa: F[A]): F[F[A]] =
+        coflatMap(fa)(fa => fa)
+    }
+
+    trait FlatMap[F[_]] extends Functors.Apply[F] {
+      def flatMap[A, B](fa: F[A])(f: A => F[B]): F[B]
+    }
+
+    trait Traverse[F[_]] extends SimpleCats.Functor[F] with SimpleCats.Foldable[F] {
+      def traverse[G[_] : Applicative, A, B](fa: F[A])(f: A => G[B]): G[F[B]]
+    }
+
+  }
+
+  object Monads {
+
+    trait Bimonad[F[_]] extends Monads.Monad[F] with Monads.Comonad[F]
+
+    trait Comonad[F[_]] extends Functors.CoflatMap[F] {
+      def extract[A](x: F[A]): A
+    }
+
+    trait Monad[F[_]] extends Functors.FlatMap[F] with Functors.Applicative[F]
+
+  }
+
+}
