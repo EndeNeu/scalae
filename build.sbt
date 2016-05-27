@@ -20,5 +20,14 @@ libraryDependencies ++= Seq(
   //"com.squareup.retrofit" % "retrofit" % "1.0.0",
   "org.scala-lang.modules" % "scala-async_2.11" % "0.9.6-RC2",
   "org.scalaz" %% "scalaz-core" % "7.2.0",
-  "com.chuusai" %% "shapeless" % "2.3.0-RC4"
+  "com.chuusai" %% "shapeless" % "2.3.0-RC4",
+  "org.typelevel" %% "cats" % "0.6.0",
+  "com.github.julien-truffaut"  %%  "monocle-core"    % "1.2.1",
+  "com.github.julien-truffaut"  %%  "monocle-generic" % "1.2.1",
+  "com.github.julien-truffaut"  %%  "monocle-macro"   % "1.2.1",
+  "com.github.julien-truffaut"  %%  "monocle-state"   % "1.2.1",
+  "com.github.julien-truffaut"  %%  "monocle-refined" % "1.2.1",
+  "com.github.julien-truffaut"  %%  "monocle-law"     % "1.2.1" % "test"
 )
+
+addCompilerPlugin("org.scalamacros" %% "paradise" % "2.1.0" cross CrossVersion.full)
