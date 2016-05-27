@@ -6,7 +6,7 @@ import scalaz.Applicative
 /**
   * From https://github.com/scalaz/scalaz/blob/series/7.3.x/example/src/main/scala/scalaz/example/ApplyUsage.scala
   */
-object ApplicativeEx {
+object ApplicativeEX {
 
   import scalaz.Apply
   import scalaz.std.option._
@@ -39,7 +39,7 @@ object ApplicativeEx {
   assert(Apply[List].ap(List(1,2,3))(List(double, addTwo)) === List(2,4,6,3,4,5))
 
   // custom applicative for custom class example.
-  case class Child[A](val param: List[A]) {
+  case class Child[A](param: List[A]) {
 
     final def map[B](f: A => B): Child[B] =
       Child[B](param.map(f))

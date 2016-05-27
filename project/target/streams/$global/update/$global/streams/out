@@ -1,4 +1,4 @@
-[info] Updating {file:/Users/emilianobusiello/Documents/workspace/scalae/project/}scalae-build...
+[info] Updating {file:/Users/ebussiello/Documents/workspace/scalae/project/}scalae-build...
 [debug] :: resolving dependencies :: default#scalae-build;0.1-SNAPSHOT
 [debug] 	confs: [compile, runtime, test, provided, optional, compile-internal, runtime-internal, test-internal, plugin, sources, docs, pom, scala-tool]
 [debug] 	validate = true
@@ -16,7 +16,7 @@
 [debug] == resolving dependencies for default#scalae-build;0.1-SNAPSHOT [provided]
 [debug] == resolving dependencies default#scalae-build;0.1-SNAPSHOT->org.scala-lang#scala-library;2.10.5 [provided->default(compile)]
 [info] Resolving org.scala-lang#scala-library;2.10.5 ...
-[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@2e3471ef
+[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@67ed0645
 [debug] sbt-chain: module revision found in cache: org.scala-lang#scala-library;2.10.5
 [debug] 	found org.scala-lang#scala-library;2.10.5 in sbt-chain
 [debug] 	[2.10.5] org.scala-lang#scala-library;2.10.5
@@ -2286,19 +2286,19 @@
 [debug] 	[NOT REQUIRED] org.scala-sbt#apply-macro;0.13.9!apply-macro.jar
 [debug] 	[NOT REQUIRED] org.scala-lang#jline;2.10.5!jline.jar
 [debug] 	[NOT REQUIRED] org.fusesource.jansi#jansi;1.4!jansi.jar
-[debug] :: resolution report :: resolve 1001ms :: artifacts dl 38ms
-[debug] 	report for default#scalae-build;0.1-SNAPSHOT compile produced in /Users/emilianobusiello/Documents/workspace/scalae/project/target/resolution-cache/reports/default-scalae-build-compile.xml
-[debug] 	report for default#scalae-build;0.1-SNAPSHOT runtime produced in /Users/emilianobusiello/Documents/workspace/scalae/project/target/resolution-cache/reports/default-scalae-build-runtime.xml
-[debug] 	report for default#scalae-build;0.1-SNAPSHOT test produced in /Users/emilianobusiello/Documents/workspace/scalae/project/target/resolution-cache/reports/default-scalae-build-test.xml
-[debug] 	report for default#scalae-build;0.1-SNAPSHOT provided produced in /Users/emilianobusiello/Documents/workspace/scalae/project/target/resolution-cache/reports/default-scalae-build-provided.xml
-[debug] 	report for default#scalae-build;0.1-SNAPSHOT optional produced in /Users/emilianobusiello/Documents/workspace/scalae/project/target/resolution-cache/reports/default-scalae-build-optional.xml
-[debug] 	report for default#scalae-build;0.1-SNAPSHOT compile-internal produced in /Users/emilianobusiello/Documents/workspace/scalae/project/target/resolution-cache/reports/default-scalae-build-compile-internal.xml
-[debug] 	report for default#scalae-build;0.1-SNAPSHOT runtime-internal produced in /Users/emilianobusiello/Documents/workspace/scalae/project/target/resolution-cache/reports/default-scalae-build-runtime-internal.xml
-[debug] 	report for default#scalae-build;0.1-SNAPSHOT test-internal produced in /Users/emilianobusiello/Documents/workspace/scalae/project/target/resolution-cache/reports/default-scalae-build-test-internal.xml
-[debug] 	report for default#scalae-build;0.1-SNAPSHOT plugin produced in /Users/emilianobusiello/Documents/workspace/scalae/project/target/resolution-cache/reports/default-scalae-build-plugin.xml
-[debug] 	report for default#scalae-build;0.1-SNAPSHOT sources produced in /Users/emilianobusiello/Documents/workspace/scalae/project/target/resolution-cache/reports/default-scalae-build-sources.xml
-[debug] 	report for default#scalae-build;0.1-SNAPSHOT docs produced in /Users/emilianobusiello/Documents/workspace/scalae/project/target/resolution-cache/reports/default-scalae-build-docs.xml
-[debug] 	report for default#scalae-build;0.1-SNAPSHOT pom produced in /Users/emilianobusiello/Documents/workspace/scalae/project/target/resolution-cache/reports/default-scalae-build-pom.xml
-[debug] 	report for default#scalae-build;0.1-SNAPSHOT scala-tool produced in /Users/emilianobusiello/Documents/workspace/scalae/project/target/resolution-cache/reports/default-scalae-build-scala-tool.xml
-[debug] 	resolve done (1001ms resolve - 38ms download)
+[debug] :: resolution report :: resolve 1263ms :: artifacts dl 60ms
+[debug] 	report for default#scalae-build;0.1-SNAPSHOT compile produced in /Users/ebussiello/Documents/workspace/scalae/project/target/resolution-cache/reports/default-scalae-build-compile.xml
+[debug] 	report for default#scalae-build;0.1-SNAPSHOT runtime produced in /Users/ebussiello/Documents/workspace/scalae/project/target/resolution-cache/reports/default-scalae-build-runtime.xml
+[debug] 	report for default#scalae-build;0.1-SNAPSHOT test produced in /Users/ebussiello/Documents/workspace/scalae/project/target/resolution-cache/reports/default-scalae-build-test.xml
+[debug] 	report for default#scalae-build;0.1-SNAPSHOT provided produced in /Users/ebussiello/Documents/workspace/scalae/project/target/resolution-cache/reports/default-scalae-build-provided.xml
+[debug] 	report for default#scalae-build;0.1-SNAPSHOT optional produced in /Users/ebussiello/Documents/workspace/scalae/project/target/resolution-cache/reports/default-scalae-build-optional.xml
+[debug] 	report for default#scalae-build;0.1-SNAPSHOT compile-internal produced in /Users/ebussiello/Documents/workspace/scalae/project/target/resolution-cache/reports/default-scalae-build-compile-internal.xml
+[debug] 	report for default#scalae-build;0.1-SNAPSHOT runtime-internal produced in /Users/ebussiello/Documents/workspace/scalae/project/target/resolution-cache/reports/default-scalae-build-runtime-internal.xml
+[debug] 	report for default#scalae-build;0.1-SNAPSHOT test-internal produced in /Users/ebussiello/Documents/workspace/scalae/project/target/resolution-cache/reports/default-scalae-build-test-internal.xml
+[debug] 	report for default#scalae-build;0.1-SNAPSHOT plugin produced in /Users/ebussiello/Documents/workspace/scalae/project/target/resolution-cache/reports/default-scalae-build-plugin.xml
+[debug] 	report for default#scalae-build;0.1-SNAPSHOT sources produced in /Users/ebussiello/Documents/workspace/scalae/project/target/resolution-cache/reports/default-scalae-build-sources.xml
+[debug] 	report for default#scalae-build;0.1-SNAPSHOT docs produced in /Users/ebussiello/Documents/workspace/scalae/project/target/resolution-cache/reports/default-scalae-build-docs.xml
+[debug] 	report for default#scalae-build;0.1-SNAPSHOT pom produced in /Users/ebussiello/Documents/workspace/scalae/project/target/resolution-cache/reports/default-scalae-build-pom.xml
+[debug] 	report for default#scalae-build;0.1-SNAPSHOT scala-tool produced in /Users/ebussiello/Documents/workspace/scalae/project/target/resolution-cache/reports/default-scalae-build-scala-tool.xml
+[debug] 	resolve done (1263ms resolve - 60ms download)
 [info] Done updating.
