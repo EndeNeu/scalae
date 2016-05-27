@@ -1,4 +1,4 @@
-package scalaE.shapeless
+package scalaE.shapelesse
 
 
 /**
