@@ -1,6 +1,6 @@
 package scalaE.definitions
 
-class ReferencialTransparency {
+object ReferencialTransparency {
 
 
   val x = "E"

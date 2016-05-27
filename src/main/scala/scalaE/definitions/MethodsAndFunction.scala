@@ -1,6 +1,6 @@
 package scalaE.definitions
 
-class MethodsAndFunction {
+object MethodsAndFunction {
 
 
   // method
