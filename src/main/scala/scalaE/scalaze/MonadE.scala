@@ -17,13 +17,13 @@ because  the left hand side will never raise a non fatal exceptions bt the right
  */
 
 
-trait Monads[T] {
+trait MonadE[T] {
 
-  def flatMap[S](f: T => Monads[S]): Monads[S]
+  def flatMap[S](f: T => MonadE[S]): MonadE[S]
 
-  def unit[S](x: S): Monads[S]
+  def unit[S](x: S): MonadE[S]
 
   // map is defined with combination of flatMap and unit
-  def map[S](m: Monads[T], f: T => S): Monads[S] = m.flatMap(x => unit(f(x)))
+  def map[S](m: MonadE[T], f: T => S): MonadE[S] = m.flatMap(x => unit(f(x)))
 
 }

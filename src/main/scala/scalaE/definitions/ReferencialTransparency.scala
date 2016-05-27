@@ -1,4 +1,4 @@
-package scalaE
+package scalaE.definitions
 
 class ReferencialTransparency {
 

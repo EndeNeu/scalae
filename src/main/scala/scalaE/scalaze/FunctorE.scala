@@ -18,7 +18,7 @@ import Scalaz._
   *
   * https://github.com/scalaz/scalaz/blob/series/7.1.x/core/src/main/scala/scalaz/Functor.scala#L68-77
   */
-object Functors {
+object FunctorE {
 
 
   import Scalaz._

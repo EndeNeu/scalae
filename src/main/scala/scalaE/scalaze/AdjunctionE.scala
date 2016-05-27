@@ -1,5 +1,5 @@
 package scalaE.scalaze
 
-object Adjunction {
+object AdjunctionE {
 
 }

@@ -3,7 +3,7 @@ package scalaE.scalaze
 /**
   * Zippers are basically a stream with a pointer.
   */
-object Zipper {
+object ZipperE {
 
   // from http://stackoverflow.com/questions/23984160/zipper-to-iterate-over-list-in-scala
 

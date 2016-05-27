@@ -4,7 +4,7 @@ package scalaE.scalaze
 import scalaz.{ @@, Tag }
 
 
-object Tagss {
+object TagE {
 
   sealed trait KiloGram
 

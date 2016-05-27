@@ -13,7 +13,7 @@ Ints are monoids because have associativity:
  x + y + z = (x + y) + z = x + (y + z)
 
  */
-object Monoids {
+object MonoidE {
 
   /*
   Here a method definition is contractive if the type of every implicit parameter type is

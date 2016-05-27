@@ -6,7 +6,7 @@ import scalaz.Applicative
 /**
   * From https://github.com/scalaz/scalaz/blob/series/7.3.x/example/src/main/scala/scalaz/example/ApplyUsage.scala
   */
-object ApplicativeEX {
+object ApplicativeE {
 
   import scalaz.Apply
   import scalaz.std.option._
