@@ -30,7 +30,7 @@ object CategoryHierarchy {
     }
 
     trait Functor[F[_]] {
-      def flatMap[A, B](fa: F[A])(f: A => B): F[B]
+      def map[A, B](fa: F[A])(f: A => B): F[B]
     }
 
     trait Semigroup[F] {
@@ -63,7 +63,7 @@ object CategoryHierarchy {
     }
 
     trait FlatMap[F[_]] extends Functors.Apply[F] {
-      def flatMap[A, B](fa: F[A])(f: A => F[B]): F[B]
+      def flatMap[A, B](fa: F[A])(f: A => B): F[B]
     }
 
     trait Traverse[F[_]] extends SimpleCats.Functor[F] with SimpleCats.Foldable[F] {
