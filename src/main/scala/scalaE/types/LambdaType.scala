@@ -26,5 +26,15 @@ object LambdaType {
   // This is an example of currying in the type system - you have curried the type of Either,
   // such that when you want to create an instance of EitherMonad,
   // you have to specify one of the types; the other of course is supplied at the time you call point or bind.
+  val eitherMonad = new EitherMonad[Int] {
+    override def point[B](b: B): Either[Int, B] = Right(b)
+
+    override def bind[B, C](m: Either[Int, B])(f: (B) => Either[Int, C]): Either[Int, C] = m match {
+      case Left(int) => Left(int)
+      case Right(someB) => f(someB)
+    }
+  }
+
+  eitherMonad.point[String]("123")
 
 }
