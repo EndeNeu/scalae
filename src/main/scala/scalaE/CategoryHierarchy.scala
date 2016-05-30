@@ -58,8 +58,7 @@ object CategoryHierarchy {
     trait CoflatMap[F[_]] extends SimpleCats.Functor[F] {
       def coflatMap[A, B](fa: F[A])(f: F[A] => B): F[B]
 
-      def coflatten[A](fa: F[A]): F[F[A]] =
-        coflatMap(fa)(fa => fa)
+      def coflatten[A](fa: F[A]): F[F[A]]
     }
 
     trait FlatMap[F[_]] extends Functors.Apply[F] {
