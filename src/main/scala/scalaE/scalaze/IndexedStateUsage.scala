@@ -1,12 +1,9 @@
 package scalaE.scalaze
 
-import scala.collection.parallel.Task
-import scala.concurrent.{Await, Future}
-import scalaz.{Functor, IMap, Monad, Ordering, StateT}
 import scala.concurrent.ExecutionContext.Implicits.global
+import scala.concurrent.{Await, Future}
 import scalaz.std.scalaFuture._
-import scalaz.Order._
-import scalaz.std.math.OrderingInstances
+import scalaz.{Functor, IMap, Monad, Ordering, StateT}
 
 /**
   * From https://speakerdeck.com/vmarquez/index-your-state-for-safer-functional-apis
